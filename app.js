@@ -17,15 +17,15 @@ const getData = async () => {
     const searchButton = document.querySelector("#search")
 searchButton.addEventListener("click", getData)
     
-async function renderList(teams) {
-  teams.forEach((team) => {
-    let teamName = document.createElement('h2')
-    teamName.innerText = team.Title
-    document.querySelector('.team-list').append(teamName)
+// async function renderList(teams) {
+//   teams.forEach((team) => {
+//     let teamName = document.createElement('h2')
+//     teamName.innerText = team.Title
+//     document.querySelector('.team-list').append(teamName)
     
-  })
-}
-renderList()
+//   })
+// }
+// renderList()
 
 
 
