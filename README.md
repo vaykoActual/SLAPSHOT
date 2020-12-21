@@ -1,7 +1,29 @@
 # SLAPSHOT
-*Interactive NHL stats*
+*Interactive NHL Records and Stats*
 
-```{
+
+- Project 1 Important Dates	Day	Date
+Project Prompt Delivered	Friday	12/17/2020
+Project Pitches	Monday	12/21/2020
+Project Deployment	Tuesday	1/05/2021
+Project Presentations	Tuesday	1/05/2021
+Project #1: Your First Application
+STEP 1: Read the Directions
+Read ALL of the directions before you start. We will know...
+STEP 2: Pitch Your Project
+Before you start any actual coding, you must meet with your Squad Leader for ~10 minutes to get your app idea approved. Prepare the following materials before your meeting and put them in your README.md:
+
+App Title: The name of your app. 
+  SLAPSHOT
+
+App Description: What your app will do.
+  INTERACTIVE NHL STATS AND RECORDS
+
+API: The API you are using and the information you plan to get from it.
+  https://records.nhl.com/site/api/record-detail
+
+API Snippet: A sample snippet of JSON from a successful GET request you have made to your API using Postman.
+
     "copyright": "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2020. All Rights Reserved.",
     "teams": [
         {
@@ -19,27 +41,16 @@
                     "tz": "EST"
                 }
             },
+        }}
 
 
-
-
-Project 1 Important Dates	Day	Date
-Project Prompt Delivered	Friday	12/17/2020
-Project Pitches	Monday	12/21/2020
-Project Deployment	Tuesday	1/05/2021
-Project Presentations	Tuesday	1/05/2021
-Project #1: Your First Application
-STEP 1: Read the Directions
-Read ALL of the directions before you start. We will know...
-STEP 2: Pitch Your Project
-Before you start any actual coding, you must meet with your Squad Leader for ~10 minutes to get your app idea approved. Prepare the following materials before your meeting and put them in your README.md:
-
-App Title: The name of your app.
-App Description: What your app will do.
-API: The API you are using and the information you plan to get from it.
-API Snippet: A sample snippet of JSON from a successful GET request you have made to your API using Postman.
 Wireframes: The proposed layout and design of your app. Create mockups for your views. If your are creating multiple views including both desktop and mobile formats, and consider whether or not you need to account for landscape and portrait orientations. Please use a digital tool to complete your wireframe.
+  https://wireframe.cc/EPbo5G
+
 MVP: A list of features you will need to build in order to meet the Minimum Viable Product. This will be the rubric your project will be graded against.
+
+
+
 Post-MVP: A list of additional/advanced features you would like to include in your app after you have met MVP.
 Goals: What you plan to accomplish for each day of the project week.
 Priority Matrix: A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority. Use a professional tool or upload a well drawn image using an image hosting site such as Cloudinary or a similar hosting service.
