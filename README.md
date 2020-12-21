@@ -1,5 +1,26 @@
 # SLAPSHOT
-Interactive NHL stats
+*Interactive NHL stats*
+
+```{
+    "copyright": "NHL and the NHL Shield are registered trademarks of the National Hockey League. NHL and NHL team marks are the property of the NHL and its teams. © NHL 2020. All Rights Reserved.",
+    "teams": [
+        {
+            "id": 8,
+            "name": "Montréal Canadiens",
+            "link": "/api/v1/teams/8",
+            "venue": {
+                "id": 5028,
+                "name": "Bell Centre",
+                "link": "/api/v1/venues/5028",
+                "city": "Montréal",
+                "timeZone": {
+                    "id": "America/Montreal",
+                    "offset": -5,
+                    "tz": "EST"
+                }
+            },
+
+
 
 
 Project 1 Important Dates	Day	Date
