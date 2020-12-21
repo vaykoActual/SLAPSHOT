@@ -58,7 +58,10 @@ Goals: <!-- UL -->
 - Continuous refinement to flow control
 - Building daily upon the basic premise of the page, adding more search functionality and additional resources.
 
-Priority Matrix: A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority. Use a professional tool or upload a well drawn image using an image hosting site such as Cloudinary or a similar hosting service.
+Priority Matrix: 
+https://whimsical.com/W4JsfrYRoxgJ8HNvPmZVwR
+
+<!-- A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority. Use a professional tool or upload a well drawn image using an image hosting site such as Cloudinary or a similar hosting service. -->
 Timeframes: 
 | Task | Expected Time | Actual Time |
 | ---- | ------------- | ----------- |
