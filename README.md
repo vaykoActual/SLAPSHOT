@@ -1,5 +1,5 @@
 # SLAPSHOT
-*Interactive NHL Records and Stats*
+### *Interactive NHL Records and Stats*
 
 
 - Project 1 Important Dates	Day	Date
@@ -14,13 +14,15 @@ STEP 2: Pitch Your Project
 Before you start any actual coding, you must meet with your Squad Leader for ~10 minutes to get your app idea approved. Prepare the following materials before your meeting and put them in your README.md:
 
 App Title: The name of your app. 
-  SLAPSHOT
+<!-- UL -->
+  - SLAPSHOT
 
 App Description: What your app will do.
   INTERACTIVE NHL STATS AND RECORDS
 
 API: The API you are using and the information you plan to get from it.
-  https://records.nhl.com/site/api/record-detail
+<!-- UL -->
+  - https://records.nhl.com/site/api/record-detail
 
 API Snippet: A sample snippet of JSON from a successful GET request you have made to your API using Postman.
 
@@ -45,11 +47,22 @@ API Snippet: A sample snippet of JSON from a successful GET request you have mad
 
 
 Wireframes: The proposed layout and design of your app. Create mockups for your views. If your are creating multiple views including both desktop and mobile formats, and consider whether or not you need to account for landscape and portrait orientations. Please use a digital tool to complete your wireframe.
-  https://wireframe.cc/EPbo5G
+<!-- UL -->
+
+ -  https://wireframe.cc/EPbo5G
 
 MVP: A list of features you will need to build in order to meet the Minimum Viable Product. This will be the rubric your project will be graded against.
 
+<!-- UL -->
 
+- Built with HTML, CSS, and JavaScript.
+- Styled using Flexbox or Grid.
+- Use Axios to make a request to an external data source and insert some of the retrieved data on to the DOM.
+- Implement responsive design using at least one media query/breakpoint (i.e. desktop, tablet, mobile, etc).
+- Fulfill the build requirements you have specified in your MVP.
+- Deployed site to a hosting service like Github Pages.
+- Make commits to GitHub every day.
+- A README.md file that contains your project worksheet, a link to your live, deployed site, and any necessary installation instructions such as npm i.
 
 Post-MVP: A list of additional/advanced features you would like to include in your app after you have met MVP.
 Goals: What you plan to accomplish for each day of the project week.
@@ -142,3 +155,111 @@ Incomplete projects will be given an extension. An instructor will follow up wit
 
 PLAGIARISM
 Remember. We have a zero-tolerance policy towards plagiarism. More on our plagiarism policy can be found in our course wiki's plagiarism page.
+
+
+
+
+
+
+<!-- Headings -->
+​
+# Heading 1
+​
+## Heading 2
+​
+### Heading 3
+​
+#### Heading 4
+​
+##### Heading 5
+​
+###### Heading 6
+​
+<!-- Italics -->
+​
+_This text_ is italic
+​
+_This text_ is italic
+​
+<!-- Strong -->
+​
+**This text** is italic
+​
+**This text** is italic
+​
+<!-- Strikethrough -->
+​
+~~This text~~ is strikethrough
+​
+<!-- Horizontal Rule -->
+​
+---
+​
+---
+​
+<!-- Blockquote -->
+​
+> This is a quote
+​
+<!-- Links -->
+​
+[Traversy Media](http://www.traversymedia.com)
+​
+[Traversy Media](http://www.traversymedia.com "Traversy Media")
+​
+<!-- UL -->
+​
+- Item 1
+- Item 2
+- Item 3
+  - Nested Item 1
+  - Nested Item 2
+​
+<!-- OL -->
+​
+1. Item 1
+1. Item 2
+1. Item 3
+​
+<!-- Inline Code Block -->
+​
+`<p>This is a paragraph</p>`
+​
+<!-- Images -->
+​
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
+​
+<!-- Github Markdown -->
+​
+<!-- Code Blocks -->
+​
+```bash
+  npm install
+  npm start
+```
+​
+```javascript
+function add(num1, num2) {
+  return num1 + num2;
+}
+```
+​
+```python
+  def add(num1, num2):
+    return num1 + num2
+```
+​
+<!-- Tables -->
+​
+| Task | Expected Time | Actual Time |
+| ---- | ------------- | ----------- |
+| HTML | 3 hrs         | xxx         |
+| CSS  | 15 hrs        | xxx         |
+| API  | 4 hrs        | xxx         |
+| Search Bar  | 3 hrs        | xxx   |
+​
+<!-- Task List -->
+​
+- [x] Task 1
+- [x] Task 2
+- [] Task 3
