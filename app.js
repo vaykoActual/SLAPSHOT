@@ -9,7 +9,7 @@ const teamSection = document.querySelector(".team-list")
 
 const getData = async () => {
   try {
-    // const getInfo = document.querySelector("input").value
+    const getInfo = document.querySelector("input").value
     // const URL = `https://cors-anywhere.herokuapp.com/https://statsapi.web.nhl.com/api/v1/teams/`
     const response = await axios.get(`${DOMAIN}`)
     // console.log(response.data)
@@ -25,8 +25,8 @@ const getData = async () => {
 getData()
 
 
-// const searchButton = document.querySelector("#search")
-// searchButton.addEventListener("click", getData)  
+const searchButton = document.querySelector("#search")
+searchButton.addEventListener("click", getData)  
 
 function renderList(teams) {
   teams.forEach((team) => {
