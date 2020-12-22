@@ -45,7 +45,7 @@ MVP:
 
 - Built with HTML, CSS, and JavaScript.
 - Styled using Flexbox or Grid.
-- Using Axios to make a requests to an external data source and inserting the retrieved data on to the DOM.
+- Using Axios to make requests to NHL records API and returning reord details on the dom.
 - Implementing a responsive design using a media query/breakpoint.
 - Deployed to GitHub.
 
