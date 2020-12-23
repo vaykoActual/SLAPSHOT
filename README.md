@@ -20,21 +20,27 @@ App Title: <!-- Strong --> _SLAPSHOT_
 
 App Description: <!-- Strong -->_INTERACTIVE NHL STATS AND RECORDS_
 
-API: <!-- Links --> https://records.nhl.com/site/api/record-detail
+API: <!-- Links --> http://statsapi.web.nhl.com/api/v1/teams/
 
 API Snippet: <!-- Code Blocks -->
 ```JSON
-{
-    "data": [
+"teams": [
         {
-            "id": 1,
-            "description": "Most Goals, Rookie, Season",
-            "descriptionKey": "most-goals-rookie-one-season",
-            "note": null,
-            "restUrl": "/site/api/skater-regular-season-scoring?cayenneExp=goals > 2 and rookieFlag = true&sort=[{\"property\":\"goals\",\"direction\":\"DESC\"},{\"property\":\"gamesPlayed\",\"direction\":\"ASC\"},{\"property\":\"seasonId\",\"direction\":\"ASC\"},{\"property\":\"lastName\",\"direction\":\"ASC\"}]",
-            "sequence": 1,
-            "videoId": "c-49860603"
-        },
+            "id": 3,
+            "name": "New York Rangers",
+            "link": "/api/v1/teams/3",
+            "venue": {
+                "id": 5054,
+                "name": "Madison Square Garden",
+                "link": "/api/v1/venues/5054",
+                "city": "New York",
+                "timeZone": {
+                    "id": "America/New_York",
+                    "offset": -5,
+                    "tz": "EST"
+                }
+            },
+
 ```
 
 
@@ -44,8 +50,8 @@ MVP:
 <!-- UL -->
 
 - Built with HTML, CSS, and JavaScript.
-- Styled using Flexbox or Grid.
-- Using Axios to make requests to NHL records API and returning reord details on the dom.
+- Styled using Flexbox.
+- Using Axios to make requests to NHL stats API and returning reord details on the dom.
 - Implementing a responsive design using a media query/breakpoint.
 - Deployed to GitHub.
 

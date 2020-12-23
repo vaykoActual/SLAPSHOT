@@ -22,32 +22,24 @@ const getData = async () => {
 }
 getData()
 
-//searchButton
-// const searchButton = document.querySelector(".search")
-// searchButton.addEventListener("click", getData)  
-
-
 //renderList
 function renderSelect(teams) {
   const select = document.createElement('select')
   select.addEventListener("change", () => {
     console.log(select.value)
     getTeamData(select.value)
-
   })
-  // console.log(select.value)
   teams.forEach((team) => {
     let teamOption = document.createElement('option')
-    teamOption.innerHTML = `
-    <h2>${team.name}</h2>
-    `
+    teamOption.innerHTML = `<h2>${team.name}</h2>`
+    // teamOption.innerHTML = `<h3>${venue.city}</h3>`
     teamOption.value = team.id
-    // const teamName = document.createElement('h3')
-    // teamName.innerHTML = `${team.name}`
     select.append(teamOption)
   })
   teamSelectSection.append(select)
 }
+
+//getting the results
 async function getTeamData(id) {
   try {
     // const getInfo = document.querySelector("input").value
@@ -60,67 +52,20 @@ async function getTeamData(id) {
   } 
 
 }
+
+//adding to the dom
 function renderteamData(data) {
   let teamData = document.querySelector(".render-team-data")
   console.log(data.teams[0])
-  teamData.innerText = data.teams[0].name
+  (teamData.textContent = data.teams[0].name)
+  
 }
  
   
-  //binarySearch
-
-// const binarySearch = (teams, target, min, max) => {
-//   const m = Math.floor((min + max) / 2);
-//   if (target == teams[mid].data) return teams[mid];
-//   if (max — 1 === min) return Math.abs(teams[min].name — target) > Math.abs(teams[max].name — t) ? teams[max] : teams[min]; 
-//   if (target > teams[mid].names) return binarySearch(teams,target,mmid,max);
-//   if (target < teams[mid].names) return binarySearch(teams,target,mmid,max);
-// }
-// let closestPoint = binarySearch(data,target, 0, data.length-1)
-
-
-//   let min = 0
-//   let max = -1
-//   while (min <= max) {
-//     let mid = Math.floor((min + max) / 2)
-//     if (target === nums[mid]) min = mid + 1
-//     else max = mid -1
-//   }
-//   return -1
-// }
-  
 
 
 
 
-
-
-
-
-
-
-  //search algo from https://code.tutsplus.com/tutorials/the-binary-search-algorithm-in-javascript--cms-30003
-
-//   function binarySearch(value, list) {
-//     let first = 0;    //left endpoint
-//     let last = list.length - 1;   //right endpoint
-//     let position = -1;
-//     let found = false;
-//     let middle;
- 
-//     while (found === false && first <= last) {
-//         middle = Math.floor((first + last)/2);
-//         if (list[middle] == value) {
-//             found = true;
-//             position = middle;
-//         } else if (list[middle] > value) {  //if in lower half
-//             last = middle - 1;
-//         } else {  //in in upper half
-//             first = middle + 1;
-//         }
-//     }
-//     return position;
-// }
 
 
 
