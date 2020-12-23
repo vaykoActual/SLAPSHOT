@@ -6,7 +6,7 @@
 // const BASE_URL = `${DOMAIN}?apikey=${API_KEY}&`
 
 const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams/`
-const teamSection = document.querySelector(".team-list")
+const teamSelectSection = document.querySelector(".team-select-section")
 
 //tryCatch
 const getData = async () => {
@@ -15,7 +15,7 @@ const getData = async () => {
     // const URL = `https://cors-anywhere.herokuapp.com/https://statsapi.web.nhl.com/api/v1/${getInfo}/`
     const response = await axios.get(`${DOMAIN}`)
     console.log(response.data)
-    renderList(response.data.searchButton)
+    renderSelect(response.data.teams)
   }
   catch (error) {
   }
@@ -23,36 +23,71 @@ const getData = async () => {
 getData()
 
 //searchButton
-const searchButton = document.querySelector("#search")
-searchButton.addEventListener("click", getData)  
+// const searchButton = document.querySelector(".search")
+// searchButton.addEventListener("click", getData)  
 
 
 //renderList
-function renderList(teams) {
+function renderSelect(teams) {
+  const select = document.createElement('select')
+  select.addEventListener("change", () => {
+    console.log(select.value)
+    getTeamData(select.value)
+
+  })
+  // console.log(select.value)
   teams.forEach((team) => {
-    let teamDiv = document.createElement('div')
-    teamDiv.innerHTML = `
+    let teamOption = document.createElement('option')
+    teamOption.innerHTML = `
     <h2>${team.name}</h2>
     `
-    const teamVenue = document.createElement('h3')
-    teamVenue.innerHTML = `${venue.name}`
-    teamSection.append(teamDiv) 
-    })
+    teamOption.value = team.id
+    // const teamName = document.createElement('h3')
+    // teamName.innerHTML = `${team.name}`
+    select.append(teamOption)
+  })
+  teamSelectSection.append(select)
+}
+async function getTeamData(id) {
+  try {
+    // const getInfo = document.querySelector("input").value
+    const response = await axios.get(`${DOMAIN}/${id}`)
+    renderteamData(response.data)
+    console.log(response.data)
+    // renderSelect(response.data.teams)
   }
+  catch (error) {
+  } 
+
+}
+function renderteamData(data) {
+  let teamData = document.querySelector(".render-team-data")
+  console.log(data.teams[0])
+  teamData.innerText = data.teams[0].name
+}
  
   
   //binarySearch
 
-const binarySearch = (nums, target) => {
-  let min = 0
-  let max = -1
-  while (min <= max) {
-    let mid = Math.floor((min + max) / 2)
-    if (target === nums[mid]) min = mid + 1
-    else max = mid -1
-  }
-  return -1
-}
+// const binarySearch = (teams, target, min, max) => {
+//   const m = Math.floor((min + max) / 2);
+//   if (target == teams[mid].data) return teams[mid];
+//   if (max — 1 === min) return Math.abs(teams[min].name — target) > Math.abs(teams[max].name — t) ? teams[max] : teams[min]; 
+//   if (target > teams[mid].names) return binarySearch(teams,target,mmid,max);
+//   if (target < teams[mid].names) return binarySearch(teams,target,mmid,max);
+// }
+// let closestPoint = binarySearch(data,target, 0, data.length-1)
+
+
+//   let min = 0
+//   let max = -1
+//   while (min <= max) {
+//     let mid = Math.floor((min + max) / 2)
+//     if (target === nums[mid]) min = mid + 1
+//     else max = mid -1
+//   }
+//   return -1
+// }
   
 
 
