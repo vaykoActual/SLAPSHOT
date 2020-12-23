@@ -8,7 +8,7 @@
 const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams/`
 const teamSection = document.querySelector(".team-list")
 
-
+//tryCatch
 const getData = async () => {
   try {
     const getInfo = document.querySelector("input").value
@@ -22,10 +22,12 @@ const getData = async () => {
 }
 getData()
 
-
+//searchButton
 const searchButton = document.querySelector("#search")
 searchButton.addEventListener("click", getData)  
 
+
+//renderList
 function renderList(teams) {
   teams.forEach((team) => {
     let teamDiv = document.createElement('div')
@@ -37,7 +39,53 @@ function renderList(teams) {
     teamSection.append(teamDiv) 
     })
   }
+ 
   
+  //binarySearch
+
+const binarySearch = (nums, target) => {
+  let min = 0
+  let max = -1
+  while (min <= max) {
+    let mid = Math.floor((min + max) / 2)
+    if (target === nums[mid]) min = mid + 1
+    else max = mid -1
+  }
+  return -1
+}
+  
+
+
+
+
+
+
+
+
+
+
+  //search algo from https://code.tutsplus.com/tutorials/the-binary-search-algorithm-in-javascript--cms-30003
+
+//   function binarySearch(value, list) {
+//     let first = 0;    //left endpoint
+//     let last = list.length - 1;   //right endpoint
+//     let position = -1;
+//     let found = false;
+//     let middle;
+ 
+//     while (found === false && first <= last) {
+//         middle = Math.floor((first + last)/2);
+//         if (list[middle] == value) {
+//             found = true;
+//             position = middle;
+//         } else if (list[middle] > value) {  //if in lower half
+//             last = middle - 1;
+//         } else {  //in in upper half
+//             first = middle + 1;
+//         }
+//     }
+//     return position;
+// }
 
 
 
