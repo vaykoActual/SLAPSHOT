@@ -1,12 +1,14 @@
 ///###SLAPSHOT###
 
 
-
-// const API_KEY = `d2e85759`
 // const BASE_URL = `${DOMAIN}?apikey=${API_KEY}&`
 
-const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams/`
+const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams`
+const DOMAIN1 = `http://statsapi.web.nhl.com/api/v1/people/{id}`
+// const DOMAIN2 = `http://statsapi.web.nhl.com/api/v1/teams/{id}roster/`
 const teamSelectSection = document.querySelector(".team-select-section")
+
+document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/jDPxsyY.jpg')";
 
 //tryCatch
 const getData = async () => {
@@ -62,6 +64,7 @@ function renderteamData(data) {
   <h2>${data.teams[0].venue.name}</h2>
   <h3>${data.teams[0].conference.name}</h3>
   <h3>EST. ${data.teams[0].firstYearOfPlay}</h3>
+  <a href=${data.teams[0].officialSiteUrl}</a>
   `
   }
 
