@@ -5,7 +5,7 @@
 
 const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams`
 const DOMAIN1 = `http://statsapi.web.nhl.com/api/v1/people/{id}`
-// const DOMAIN2 = `http://statsapi.web.nhl.com/api/v1/teams/{id}roster/`
+// const DOMAIN2 = `http://statsapi.web.nhl.com/api/v1/teams/{id}/roster/`
 const teamSelectSection = document.querySelector(".team-select-section")
 
 document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/jDPxsyY.jpg')";
@@ -28,13 +28,12 @@ getData()
 function renderSelect(teams) {
   const select = document.createElement('select')
   select.addEventListener("change", () => {
-    console.log(select.value)
+    // console.log(select.value)
     getTeamData(select.value)
   })
   teams.forEach((team) => {
     let teamOption = document.createElement('option')
     teamOption.innerHTML = `<h2>${team.name}</h2>`
-    // teamOption.innerHTML = `<h3>${venue.city}</h3>`
     teamOption.value = team.id
     select.append(teamOption)
   })
@@ -43,12 +42,13 @@ function renderSelect(teams) {
 
 //getting the results
 async function getTeamData(id) {
+  console.log(id)
   try {
-    // const getInfo = document.querySelector("input").value
-    const response = await axios.get(`${DOMAIN}/${id}`)
+    const response = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/`)
+    const response1 = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/roster/`)
+    console.log(response1.data.roster)
     renderteamData(response.data)
-    console.log(response.data)
-    // renderSelect(response.data.teams)
+    renderteamData(response1.data.roster)
   }
   catch (error) {
   } 
@@ -64,7 +64,9 @@ function renderteamData(data) {
   <h2>${data.teams[0].venue.name}</h2>
   <h3>${data.teams[0].conference.name}</h3>
   <h3>EST. ${data.teams[0].firstYearOfPlay}</h3>
-  <a href=${data.teams[0].officialSiteUrl}</a>
+  <ul>${data.roster[0].person.fullName}${data.roster[0].person.jerseyNumber}</ul>
+  // <a href=${data.teams[0].officialSiteUrl}</a>
   `
-  }
+}
+
 

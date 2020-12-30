@@ -1,39 +1,29 @@
+body {
+  text-align: center;
+}
 
- html,
- body {
-  height: 100%;
-  position: relative;
-  background-size: cover;
- }
+input {
+  padding: 8px;
+  border-radius: 2px;
+  border-radius: 14%;
+  margin:5px;
+}
 
- div, h1,
- .search-section {
+img {
+  height: 200px;
+}
+button {
+  text-transform: uppercase;
+  border: 1px solid black;
+  background-color: #92A63E;
+  padding: 8px;
+  border-radius: 14%;
+}
+
+.search-section {
   display: flex;
-  flex-flow: row wrap ; 
-  /* align-content: center; */
-  justify-content: center; 
-  align-content: center;
-  /* padding: 10px; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   margin: 10px;
-}
- .main-container {
-  min-height: 100vh; /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: flex;
-  position: relative;
-  padding-bottom: 100px; /* height of your footer */
- }
-
- footer {
-   display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: .75em;
- }
-@media only screen and (max-width: 600px) {
-  body {
-  display: flex ;
-}
-
 }
