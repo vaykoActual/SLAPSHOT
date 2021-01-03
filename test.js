@@ -35,7 +35,8 @@
 // //   })
 // // }
 
-
+<ul>${data.roster[0].person.fullName}${data.roster[0].person.jerseyNumber}</ul>
+  <a href=${data.teams[0].officialSiteUrl}</a></a>
 
 
 

@@ -8,7 +8,7 @@ const DOMAIN1 = `http://statsapi.web.nhl.com/api/v1/people/{id}`
 // const DOMAIN2 = `http://statsapi.web.nhl.com/api/v1/teams/{id}/roster/`
 const teamSelectSection = document.querySelector(".team-select-section")
 
-document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/jDPxsyY.jpg')";
+// document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/jDPxsyY.jpg')";
 
 //tryCatch
 const getData = async () => {
@@ -48,7 +48,7 @@ async function getTeamData(id) {
     const response1 = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/roster/`)
     console.log(response1.data.roster)
     renderteamData(response.data)
-    renderteamData(response1.data.roster)
+    renderRoster(response.data.roster)
   }
   catch (error) {
   } 
@@ -64,9 +64,16 @@ function renderteamData(data) {
   <h2>${data.teams[0].venue.name}</h2>
   <h3>${data.teams[0].conference.name}</h3>
   <h3>EST. ${data.teams[0].firstYearOfPlay}</h3>
-  <ul>${data.roster[0].person.fullName}${data.roster[0].person.jerseyNumber}</ul>
-  // <a href=${data.teams[0].officialSiteUrl}</a>
   `
+  renderRoster(response.data.roster)
+}
+function renderRoster(data) {
+  let teamRoster = document.querySelector(".render-team-data")
+  console.log(data.roster[0])
+  teamRoster.innerHTML = `
+  <li>${data.roster[0].person.fullName}</li>
+  `
+  
 }
 
 
