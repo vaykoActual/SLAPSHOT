@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color:  rgba(128, 128, 128, .75);
+  background-color: rgba(255, 255, 255, 1)
 }
 
 input {
@@ -11,8 +11,9 @@ input {
 }
 
 img {
+  display: inline-flex;
   height: 200px;
-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 3px rgba(0,0,0,.5);
   
 }
 button {
@@ -24,7 +25,8 @@ button {
 }
 
 .search-section {
-  display: flex;
+  display: inline-flexbox;
+  flex-wrap:inline-flexbox;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -41,3 +43,4 @@ footer {
   border-radius: 14%;
   margin:5px;
 }
+

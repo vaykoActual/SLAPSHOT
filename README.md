@@ -1,5 +1,5 @@
 # SLAPSHOT
-## *Interactive NHL Records and Stats*
+## *Interactive NHL Team Info*
 
 
 ### Project 1 Important Dates	Day	Date
@@ -18,7 +18,7 @@ Before you start any actual coding, you must meet with your Squad Leader for ~10
 
 App Title: <!-- Strong --> _SLAPSHOT_
 
-App Description: <!-- Strong -->_INTERACTIVE NHL STATS AND RECORDS_
+App Description: <!-- Strong -->_INTERACTIVE NHL TEAM INFO_
 
 API: <!-- Links --> http://statsapi.web.nhl.com/api/v1/teams/
 
@@ -72,7 +72,7 @@ Timeframes:
 | Task | Expected Time | Actual Time |
 | ---- | ------------- | ----------- |
 | HTML | 3 hrs         | xxx         |
-| CSS  | 15 hrs        | xxx         |
+| CSS  | 5 hrs        | xxx         |
 | API  | 4 hrs        | xxx         |
 | Search Bar  | 3 hrs        | xxx   |
 | Search functions | 8 hrs | xxx |

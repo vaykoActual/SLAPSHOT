@@ -14,7 +14,6 @@ const teamSelectSection = document.querySelector(".team-select-section")
 const getData = async () => {
   try {
     const getInfo = document.querySelector("form").value
-    // const URL = `https://cors-anywhere.herokuapp.com/https://statsapi.web.nhl.com/api/v1/${getInfo}/`
     const response = await axios.get(`${DOMAIN}`)
     console.log(response.data)
     renderSelect(response.data.teams)
@@ -75,5 +74,6 @@ function renderRoster(data) {
   `
   
 }
+
 
 
