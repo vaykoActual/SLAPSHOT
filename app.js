@@ -4,7 +4,7 @@
 const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams`
 const teamSelectSection = document.querySelector(".team-select-section")
 const playerSelectSection = document.querySelector(".player-select-section")
-
+let playerName;
 
 
 //tryCatch
@@ -15,6 +15,7 @@ const getData = async () => {
     console.log(response.data)
     
     renderSelect(response.data.teams)
+    
   }
   catch (error) {
   }
@@ -39,17 +40,28 @@ function renderSelect(teams) {
   teamSelectSection.append(select)
 }
 
+
 //getting the results
 async function getTeamData(id) {
   // console.log(id)
   try {
     const response = await axios.get(`${DOMAIN}/${id}`)
     const response1 = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/roster/`)
-    
-    console.log(response1.data.roster[0].person.fullName)
+    let players = response1.data.roster
+    console.log(players)
+
+   
+// using for loop to loop through data to access player names due to nested objects
+    for (let i = 0; i < players.length; i++){
+      let playerValue = players[i]
+      playerName = playerValue.person.fullName
+      // console.log(playerName)
+    }
+
     renderteamData(response.data)
     
-    renderRoster(response1.data.roster)
+    renderRoster(playerName, id)
+    
   }
   catch (error) {
   } 
@@ -71,20 +83,25 @@ function renderteamData(data) {
   
 }
 
-function renderRoster() {
-  const select1 = document.createElement('select')
-  select1.addEventListener("change", () => {
-    console.log(select1.value)
-    getTeamData(select1.value)
-  })
-  players.forEach((player) => {
-    let playerOption = document.createElement('option')
-    playerOption.innerHTML = `<h2>${team.name}</h2>`
-    playerOption.value = team.id
-    select1.append(playerOption)
-  })
-  playerSelectSection.append(select1)
-}
+
+
+    function renderRoster(id) {
+      const select1 = document.createElement('select')
+      select1.addEventListener("change", () => {
+        getTeamData(select1.value)
+        console.log(select1.value)
+        console.log('are you working')
+      })
+      players.forEach((player) => {
+        // response1.data.roster[0].person.fullName
+        let playerOption = document.createElement('option')
+        playerOption.innerHTML = `<h2>${player.playerName}</h2>`
+        playerOption.value = team.id
+        select1.append(playerOption)
+      })
+      playerSelectSection.append(select1)
+      teamData.append(playerSelectSection)
+    }
 
 
   
