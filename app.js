@@ -35,7 +35,7 @@ function renderSelect(teams) {
 
 //getting the results
 async function getTeamData(id) {
-  console.log(id)
+  // console.log(id)
   try {
     const response = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/`)
     const response1 = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/roster/`)
@@ -57,31 +57,26 @@ function renderteamData(data) {
   <h2>${data.teams[0].venue.name}</h2>
   <h3>${data.teams[0].conference.name} Confernece</h3>
   <h3>EST. ${data.teams[0].firstYearOfPlay}</h3>
+  <a>${data.teams[0].officialSiteUrl}</a>
   `
   
 }
 function playerSelect(players) {
   const choice = document.createElement('choice')
   choice.addEventListener("change", () => {
-    // console.log(select.value)
     getTeamData(choice.value)
   })
   players.forEach((player) => {
     let playerOption = document.createElement('option')
-    playerOption.innerHTML = `<h2>${player.name}</h2>`
-    playerOption.value = player.id
+    playerOption.innerHTML = `<h2>${person.name}</h2>`
+    playerOption.value = person.id
     choice.append(teamOption)
   })
   teamSelectSection.append(select)
 }
 
 
-// function renderRoster(data) {
-//   let teamRoster = document.querySelector(".render-team-data")
-//   console.log(data.roster[0])
-//   teamRoster.innerHTML = `
-//   <h3>${data.roster[0].person.fullName}</h3>
-//   `
+
   
 
 
