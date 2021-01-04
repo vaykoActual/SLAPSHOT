@@ -1,14 +1,8 @@
 ///###SLAPSHOT###
 
 
-// const BASE_URL = `${DOMAIN}?apikey=${API_KEY}&`
-
 const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams`
-const DOMAIN1 = `http://statsapi.web.nhl.com/api/v1/people/{id}`
-// const DOMAIN2 = `http://statsapi.web.nhl.com/api/v1/teams/{id}/roster/`
 const teamSelectSection = document.querySelector(".team-select-section")
-
-// document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/jDPxsyY.jpg')";
 
 //tryCatch
 const getData = async () => {
@@ -57,23 +51,39 @@ async function getTeamData(id) {
 //adding to the dom
 function renderteamData(data) {
   let teamData = document.querySelector(".render-team-data")
-  console.log(data.teams[0])
+  // console.log(data.teams[0])
   teamData.innerHTML = `
   <h1>${data.teams[0].name}</h1>
   <h2>${data.teams[0].venue.name}</h2>
-  <h3>${data.teams[0].conference.name}</h3>
+  <h3>${data.teams[0].conference.name} Confernece</h3>
   <h3>EST. ${data.teams[0].firstYearOfPlay}</h3>
-  `
-  renderRoster(response.data.roster)
-}
-function renderRoster(data) {
-  let teamRoster = document.querySelector(".render-team-data")
-  console.log(data.roster[0])
-  teamRoster.innerHTML = `
-  <li>${data.roster[0].person.fullName}</li>
   `
   
 }
+function playerSelect(players) {
+  const choice = document.createElement('choice')
+  choice.addEventListener("change", () => {
+    // console.log(select.value)
+    getTeamData(choice.value)
+  })
+  players.forEach((player) => {
+    let playerOption = document.createElement('option')
+    playerOption.innerHTML = `<h2>${player.name}</h2>`
+    playerOption.value = player.id
+    choice.append(teamOption)
+  })
+  teamSelectSection.append(select)
+}
+
+
+// function renderRoster(data) {
+//   let teamRoster = document.querySelector(".render-team-data")
+//   console.log(data.roster[0])
+//   teamRoster.innerHTML = `
+//   <h3>${data.roster[0].person.fullName}</h3>
+//   `
+  
+
 
 
 

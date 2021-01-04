@@ -35,11 +35,16 @@
 // //   })
 // // }
 
-<ul>${data.roster[0].person.fullName}${data.roster[0].person.jerseyNumber}</ul>
-  <a href=${data.teams[0].officialSiteUrl}</a></a>
+{/* <ul>${data.roster[0].person.fullName}${data.roster[0].person.jerseyNumber}</ul>
+  <a href=${data.teams[0].officialSiteUrl}</a></a> */}
+
+
+// const BASE_URL = `${DOMAIN}?apikey=${API_KEY}&`
+
+
 
  // const URL = `https://cors-anywhere.herokuapp.com/https://statsapi.web.nhl.com/api/v1/${getInfo}/`
-
+// document.body.style.backgroundImage = "url('https://wallpapercave.com/wp/jDPxsyY.jpg')";
 
 //
 
