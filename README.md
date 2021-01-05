@@ -1,5 +1,5 @@
 # SLAPSHOT
-## *Interactive NHL Team Info*
+## *Interactive NHL Team Information*
 
 
 ### Project 1 Important Dates	Day	Date
@@ -49,15 +49,15 @@ Wireframes: <!-- LINK -->https://wireframe.cc/EPbo5G
 MVP: 
 <!-- UL -->
 
-- Built with HTML, CSS, and JavaScript.
-- Styled using Flexbox.
-- Using Axios to make requests to NHL stats API and returning reord details on the dom.
+- Built and styled with HTML, CSS, Flexbox and JavaScript.
+- Using Axios to make requests to the NHL API and returning record details on the DOM.
 - Implementing a responsive design using a media query/breakpoint.
 - Deployed to GitHub.
 
 
 Post-MVP: <!-- UL -->
 - Add additional API for content.
+- Add additonal functionality for team rosters and stats.
 
 Goals: <!-- UL -->
 - Daily commits with project updates
@@ -71,11 +71,11 @@ https://whimsical.com/W4JsfrYRoxgJ8HNvPmZVwR
 Timeframes: 
 | Task | Expected Time | Actual Time |
 | ---- | ------------- | ----------- |
-| HTML | 3 hrs         | xxx         |
-| CSS  | 5 hrs        | xxx         |
-| API  | 4 hrs        | xxx         |
-| Search Bar  | 3 hrs        | xxx   |
-| Search functions | 8 hrs | xxx |
+| HTML | 3 hrs         | 3hrs         |
+| CSS  | 5 hrs        | 5hrs         |
+| API  | 4 hrs        | 4hrs         |
+| Search Bar  | 3 hrs        | 3hrs   |
+| Search functions | 8 hrs | 16hrs |
 
 <!-- Horizontal Rule -->__________________________________________________________
 
@@ -104,29 +104,8 @@ Make commits to GitHub every day.
 - A README.md file that contains your project worksheet, a link to your live, deployed site, and any necessary installation instructions such as npm i.
 
 
-<!-- 📋 List of APIs -->
-<!-- Below is a non-exhaustive list of some free APIs you can use. There are many APIs out there, however, so if you find one not on this list, feel free to use it. No matter what API you decide on, make sure you can successfully make a GET request before you commit to using it.
 
-- Weather: https://openweathermap.org/api
-- News: https://newsapi.org/
-- Giphy: https://developers.giphy.com/
-- Pokemon: http://pokeapi.co/
-- Card Deck: https://deckofcardsapi.com/
-- City of Chicago: https://data.cityofchicago.org/
-- Beer: https://www.brewerydb.com/developers
-- NYC Open Data: https://opendata.cityofnewyork.us/
-- Rick and Morty: https://rickandmortyapi.com/documentation/#rest -->
-
-<!-- This site lists a collection APIs as well. Take a look through their libraries and try to find one that interests you. Please note, however, that many APIs will require an authentication key, and some APIs require payment. We highly suggest using a free API for your first project dealing with one.
-
-STEP 5: 🔵 Ideas for Post-MVP - Not Mandatory
-- Look into localstorage so you can save data to the  user's browser
-- Add a second API.
-- Add creative use of event listeners and UI interaction.
-- Add animations.
-- Get input from a UX student on how to make your app have intuitive UI and design. -->
-
-<!-- STEP 6: Technical Demonstration
+STEP 6: Technical Demonstration
 All projects will be presented to the class. Your presentation should:
 
 - Be no longer than 5 minutes in length
@@ -143,7 +122,7 @@ You will be sharing your project and your code. Be prepared to answer questions 
 ## Did you read all of the directions before starting? If so write git commit -m "My Ruby Project 1" instead of git commit -m "first commit" for your first commit. -->
 
 
-<!-- Step 7: Help and Support
+Step 7: Help and Support
 - Each student will be given 5 (five) tokens, redeemable at any time during regular class time (subject to instructors' schedules), for 20 minutes. Tokens cannot be transferred between students - there is no secondary market for tokens.
 
 - Give at least a 10 minutes heads up to an instructor with the link to your project repo and a link to your issue ticket. Instructors will not be holding open office hours during project week. This is to allow you to solve issues and errors you run in to on your own and with your classmates.
@@ -152,7 +131,7 @@ Project approval sign up form
 
 Sign up here for help with your squad lead. -->
 
-<!-- Step 8: Grading
+Step 8: Grading
 Hard Requirements
 The following requirements must be met in order for the project to be considered complete:
 
@@ -179,105 +158,3 @@ Remember. We have a zero-tolerance policy towards plagiarism. More on our plagia
 
 
 
-<!-- Headings
-​
-# Heading 1
-​
-## Heading 2
-​
-### Heading 3
-​
-#### Heading 4
-​
-##### Heading 5
-​
-###### Heading 6
-​ -->
-<!-- Italics -->
-​
-<!-- _This text_ is italic
-​
-_This text_ is italic -->
-​
-<!-- Strong -->
-​
-<!-- **This text** is italic
-​
-**This text** is italic -->
-​
-<!-- Strikethrough -->
-​
-<!-- ~~This text~~ is strikethrough -->
-​
-<!-- Horizontal Rule -->
-​
-<!-- ---
-​
---- -->
-​
-<!-- Blockquote -->
-​
-<!-- > This is a quote -->
-​
-<!-- Links -->
-​
-<!-- [Traversy Media](http://www.traversymedia.com)
-​
-[Traversy Media](http://www.traversymedia.com "Traversy Media") -->
-​
-<!-- UL -->
-​
-<!-- - Item 1
-- Item 2
-- Item 3
-  - Nested Item 1
-  - Nested Item 2 -->
-​
-<!-- OL -->
-​
-<!-- 1. Item 1
-1. Item 2
-1. Item 3 -->
-​
-<!-- Inline Code Block -->
-​
-<!-- `<p>This is a paragraph</p>` -->
-​
-<!-- Images -->
-​
-<!-- ![Markdown Logo](https://markdown-here.com/img/icon256.png) -->
-​
-<!-- Github Markdown -->
-​
-<!-- Code Blocks -->
-​
-<!-- ```bash
-  npm install
-  npm start
-```
-​
-```javascript
-function add(num1, num2) {
-  return num1 + num2;
-}
-```
-​
-```python
-  def add(num1, num2):
-    return num1 + num2
-``` -->
-​
-<!-- Tables -->
-​
-<!-- | Task | Expected Time | Actual Time |
-| ---- | ------------- | ----------- |
-| HTML | 3 hrs         | xxx         |
-| CSS  | 15 hrs        | xxx         |
-| API  | 4 hrs        | xxx         |
-| Search Bar  | 3 hrs        | xxx   | -->
-​
-<!-- Task List -->
-​
-<!-- - [x] Task 1
-- [x] Task 2
-- [] Task 3 -->

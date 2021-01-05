@@ -3,9 +3,10 @@
 
 const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams`
 const teamSelectSection = document.querySelector(".team-select-section")
-// const playerSelectSection = document.querySelector(".player-select-section")
 
-//tryCatch
+
+//tryCatch the form is getting a response from the API 
+
 const getData = async () => {
   try {
     const getInfo = document.querySelector("form").value
@@ -17,25 +18,8 @@ const getData = async () => {
 }
 getData()
 
-//renderList
-function renderSelect(teams) {
-  const select = document.createElement('select')
-  select.addEventListener("change", () => {
-    getTeamData(select.value)
-  })
-  teams.forEach((team) => {
-    let teamOption = document.createElement('option')
-    teamOption.innerHTML = `
-    <h2>${team.name}</h2>`
-    teamOption.value = team.id
-    select.append(teamOption)
-  })
-  teamSelectSection.append(select)
-}
+//getting the results from the API
 
-
-
-//getting the results
 async function getTeamData(id) {
   try {
     const response = await axios.get(`${DOMAIN}/${id}`)
@@ -45,10 +29,34 @@ async function getTeamData(id) {
     }
   catch (error) {
   } 
-
 }
 
-//adding to the dom
+//renderList the dropdown is created and populated with a dummy name awaiting user input, once a selection has been made the information is appended to the DOM.
+
+function renderSelect(teams) {
+  const select = document.createElement('select')
+  select.addEventListener("change", () => {
+    getTeamData(select.value)
+  })
+
+  //The dummy name for the dropdown
+
+  const selectTeam = [{ name: 'Select a Team', id: 222 }, ...teams]
+  
+  //populating the dropdown
+
+  selectTeam.forEach((team) => {
+    let teamOption = document.createElement('option')
+    teamOption.innerHTML = `
+    <h2>${team.name}</h2>`
+    teamOption.value = team.id
+    select.append(teamOption)
+  })
+  teamSelectSection.append(select)
+}
+
+//adding to the results to the DOM with string interpolation
+
 function renderteamData(data, players) {
   let teamData = document.querySelector(".render-team-data")
   teamData.innerHTML = `
@@ -61,23 +69,7 @@ function renderteamData(data, players) {
 }
 
 
-// function renderRoster(players) {
-//       const select1 = document.createElement('select')
-//       select1.addEventListener("change", () => {
-//         getTeamData(select1.value)
-//         console.log(select1.value)
-//         console.log('are you working')
-//       })
-//       players.forEach((player) => {
-//         // response1.data.roster[0].person.fullName
-//         let playerOption = document.createElement('option')
-//         playerOption.innerHTML = `<h2>${player.playerName}</h2>`
-//         playerOption.value = team.id
-//         select1.append(playerOption)
-//       })
-//       playerSelectSection.append(select1)
-//       teamData.append(playerSelectSection)
-    
+
 
 
   
