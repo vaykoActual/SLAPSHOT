@@ -4,9 +4,9 @@
 
 ### Project 1 Important Dates	Day	Date
 <!-- UL -->
-- Project Prompt Delivered	Friday	12/17/2020
-- Project Pitches	Monday	12/21/2020
-- Project Deployment	Tuesday	1/05/2021
+- Project Prompt Delivered	Friday	12/17/2020  Completed
+- Project Pitches	Monday	12/21/2020  Completed
+- Project Deployment	Tuesday	1/05/2021 Completed
 - Project Presentations	Tuesday	1/05/2021
 - Project #1: Your First Application
 
