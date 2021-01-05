@@ -1,7 +1,7 @@
 ///###SLAPSHOT###
 
 
-const DOMAIN = `http://statsapi.web.nhl.com/api/v1/teams`
+const DOMAIN = `https://statsapi.web.nhl.com/api/v1/teams`
 const teamSelectSection = document.querySelector(".team-select-section")
 
 
