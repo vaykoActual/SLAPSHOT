@@ -23,9 +23,9 @@ getData()
 async function getTeamData(id) {
   try {
     const response = await axios.get(`${DOMAIN}/${id}`)
-    const response1 = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/roster/`)
-    let players = response1.data.roster
-    renderteamData(response.data, players)
+    // const response1 = await axios.get(`http://statsapi.web.nhl.com/api/v1/teams/${id}/roster/`)
+    // let players = response1.data.roster
+    renderteamData(response.data)
     }
   catch (error) {
   } 
@@ -43,7 +43,7 @@ function renderSelect(teams) {
 
   const selectTeam = [{ name: 'Select a Team', id: 222 }, ...teams]
   
-  //populating the dropdown
+  //populating the dropdown, team names are appended to the list
 
   selectTeam.forEach((team) => {
     let teamOption = document.createElement('option')
@@ -55,7 +55,7 @@ function renderSelect(teams) {
   teamSelectSection.append(select)
 }
 
-//adding to the results to the DOM with string interpolation
+//adding to the results to the DOM with string interpolation, thius function is called in getTeamData
 
 function renderteamData(data, players) {
   let teamData = document.querySelector(".render-team-data")

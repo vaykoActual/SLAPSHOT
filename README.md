@@ -46,6 +46,21 @@ API Snippet: <!-- Code Blocks -->
 
 Wireframes: <!-- LINK -->https://wireframe.cc/EPbo5G
 
+Code Snipet:
+```JS
+//populating the dropdown, team names are appended to the list
+
+  selectTeam.forEach((team) => {
+    let teamOption = document.createElement('option')
+    teamOption.innerHTML = `
+    <h2>${team.name}</h2>`
+    teamOption.value = team.id
+    select.append(teamOption)
+  })
+  teamSelectSection.append(select)
+}
+```
+
 MVP: 
 <!-- UL -->
 
@@ -65,15 +80,18 @@ Goals: <!-- UL -->
 - Building daily upon the basic premise of the page, adding more search functionality and additional resources.
 
 Priority Matrix: 
+
 https://whimsical.com/W4JsfrYRoxgJ8HNvPmZVwR
 
-<!-- A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority. Use a professional tool or upload a well drawn image using an image hosting site such as Cloudinary or a similar hosting service. -->
-Timeframes: 
+A graph of your intended areas of development (Pseudocoding, Design, HTML, CSS, JavaScript, Testing, etc) plotted on an X/Y axis where X represents time to completion and Y represents priority. Use a professional tool or upload a well drawn image using an image hosting site such as Cloudinary or a similar hosting service.
+
+
+TimeOnTask: 
 | Task | Expected Time | Actual Time |
 | ---- | ------------- | ----------- |
 | HTML | 3 hrs         | 3hrs         |
 | CSS  | 5 hrs        | 5hrs         |
-| API  | 4 hrs        | 4hrs         |
+| API  | 4 hrs        | 8hrs         |
 | Search Bar  | 3 hrs        | 3hrs   |
 | Search functions | 8 hrs | 16hrs |
 
